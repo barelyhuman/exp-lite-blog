@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Register Admin User</h1>
+      <form method="POST" action="/admin/register">
+        <div class="form-control">
+          <label for="">
+            Email
+            <input type="email" name="email" placeholder="example@example.com"/>
+          </label>
+        </div>
+        <div class="form-control">
+          <label for="">
+            Password
+            <input type="password" name="password" placeholder="somethingStrongWouldDo!!"/>
+          </label>
+        </div>
+        <div class="form-control">
+          <label for="">
+            Confirm Password
+            <input type="password" name="confirmPassword" placeholder="somethingStrongWouldDo!!"/>
+          </label>
+        </div>
+        <div class="form-control">
+          <button>Register</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

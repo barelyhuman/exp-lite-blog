@@ -2,9 +2,17 @@ import * as markdown from 'marked'
 import fs from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { allRouteHandler } from './lib/handlers.js'
+import { cms } from './lib/cms.js'
+import {
+  appHandler,
+  blogRouteHandler,
+  loginHandler,
+  registerAdmin,
+  staticHandler,
+} from './lib/handlers.js'
 import { createApp } from './lib/http-middleware.js'
 import { responder } from './lib/responder.js'
+import { bodyParser } from './lib/body-parser.js'
 
 export const app = createApp()
 
@@ -55,5 +63,14 @@ indexMeta.sort((x, y) => {
 app.context.indexMeta = indexMeta
 
 app.use(responder)
+app.use(bodyParser)
+app.use(staticHandler)
+app.use(loginHandler)
+app.use(registerAdmin)
+app.use(appHandler)
+app.use(blogRouteHandler)
 
-app.use(allRouteHandler)
+// Initialise CMS
+;(async () => {
+  await cms.init()
+})()
