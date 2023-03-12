@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;600&display=swap');
+
+:root {
+  /* --mw: 80ch; */
+  --mw: 38rem;
+  --hrmw: 18rem;
+
+  /* grays */
+  --a0: #ddd;
+  --a1: #d3d3d3;
+  --a2: #bebebe;
+  --a3: #aaa;
+  --a4: #959595;
+  --a5: #818181;
+  --a6: #656565;
+  --a7: #494949;
+  --a8: #2d2d2d;
+  --a9: #111;
+
+  /* color grounds */
+  --bg: var(--a0);
+  --fg: var(--a9);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* grays */
+    --a0: #111;
+    --a1: #2d2d2d;
+    --a2: #494949;
+    --a3: #656565;
+    --a4: #818181;
+    --a5: #959595;
+    --a6: #aaa;
+    --a7: #bebebe;
+    --a8: #d3d3d3;
+    --a9: #ddd;
+  }
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: 0 0;
+  text-decoration: none;
+  outline: 0;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  color: inherit;
+  border: 0;
+  list-style: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+::after,
+::before {
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+body {
+  font-family: 'Bitter', Georgia, 'Times New Roman', Times, serif;
+  padding: 5rem 1.5rem 1.5rem;
+}
+
+p {
+  line-height: 2rem;
+}
+
+article h1 {
+  margin-bottom: 3rem;
+}
+
+blockquote,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+nav,
+ol,
+p,
+pre,
+ul {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: var(--mw);
+}
+
+article strong {
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: calc(16px * 1.5);
+}
+
+ul {
+  list-style-position: outside;
+}
+
+li {
+  list-style-type: disc;
+}
+
+hr {
+  display: block;
+  border: 0;
+  height: 2px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: var(--a0);
+  width: var(--hrmw);
+}
+
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  font-weight: 600;
+  line-height: 1.3rem;
+  padding-bottom: 0.35rem;
+  padding-top: 0.35rem;
+}
+
+article h2,
+article h3 {
+  margin-bottom: 2rem;
+}
+
+article ol,
+article ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+article blockquote {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: border 150ms linear;
+}
+
+a:hover {
+  border-bottom: 2px solid black;
+}
+
+em,
+i {
+  font-style: italic;
+}

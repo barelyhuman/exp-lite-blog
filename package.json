@@ -1,0 +1,21 @@
+{
+  "name": "example-blog",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "fix": "prettier --write ."
+  },
+  "dependencies": {
+    "marked": "^4.2.12"
+  },
+  "prettier": "@barelyhuman/prettier-config",
+  "devDependencies": {
+    "@barelyhuman/prettier-config": "^1.1.0",
+    "@types/node": "^18.15.0",
+    "nodemon": "^2.0.21",
+    "prettier": "^2.8.4"
+  }
+}
